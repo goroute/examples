@@ -2,8 +2,7 @@ package main
 
 import (
 	"flag"
-	"html/template"
-	"io"
+	"github.com/goroute/compress"
 	"log"
 	"net/http"
 	"time"
@@ -15,23 +14,14 @@ var (
 	addr = flag.String("addr", ":9000", "Server serve address")
 )
 
-type templateRenderer struct {
-	templates *template.Template
-}
-
-func (t *templateRenderer) Render(w io.Writer, name string, data interface{}, c route.Context) error {
-	return t.templates.ExecuteTemplate(w, name, data)
-}
-
 func main() {
 	flag.Parse()
 
-	// Register views.
-	renderer := &templateRenderer{
-		templates: template.Must(template.ParseGlob("views/*.html")),
-	}
+	mux := route.NewServeMux(
+		route.WithRenderer(route.NewDefaultTemplateRenderer("views/*html")),
+	)
 
-	mux := route.NewServeMux(route.WithRenderer(renderer))
+	mux.Use(compress.New())
 
 	// Serve static files under /static path from assets folder.
 	mux.Static("/static", "assets")

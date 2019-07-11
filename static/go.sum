@@ -1,5 +1,9 @@
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/goroute/route v0.0.0-20190711182439-6728791eeef1 h1:sIFvQkuVTzkTazdrqo/rDe38lfM8zZ9L8htepFXJl0c=
+github.com/goroute/compress v0.0.0-20190711184201-03d6000294cd h1:bruM5oSjoI7ZqsN/kRQ5cFyLV7U/dvru6hybjd7KgP4=
+github.com/goroute/compress v0.0.0-20190711184201-03d6000294cd/go.mod h1:HmXoTG3+bdna0dM7LPNw4BT0U8HgfKfSworXQAsfX1o=
+github.com/goroute/route v0.0.0-20190710112710-137e786ee98a/go.mod h1:NbIJ/ugD3lKtySaGZKqTMvxLmUCVD19uZ6HZrZUEQrY=
 github.com/goroute/route v0.0.0-20190711182439-6728791eeef1/go.mod h1:NbIJ/ugD3lKtySaGZKqTMvxLmUCVD19uZ6HZrZUEQrY=
+github.com/goroute/route v0.0.0-20190711190812-e51898258e9a h1:/J9fenNP3gsPjU75ILeW7+FMjddSROc4sbYU3SOKHBA=
+github.com/goroute/route v0.0.0-20190711190812-e51898258e9a/go.mod h1:NbIJ/ugD3lKtySaGZKqTMvxLmUCVD19uZ6HZrZUEQrY=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
