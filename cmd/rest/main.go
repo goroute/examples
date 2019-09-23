@@ -20,6 +20,9 @@ func main() {
 
 	v1.GET("/customers/:id", func(c route.Context) error {
 		customerID := c.Param("id")
+		if len(customerID) != 32 {
+			return route.NewHTTPError(http.StatusBadRequest, "a", "b")
+		}
 		return c.String(http.StatusOK, fmt.Sprintf("GET customer %s\n", customerID))
 	})
 
